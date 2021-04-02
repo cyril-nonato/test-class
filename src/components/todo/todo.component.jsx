@@ -13,12 +13,6 @@ class TodoComponent extends Component {
     deleteTodo(item.id)
   }
 
-  // componentDidMount() {
-  //   window.addEventListener("mouseover", (e) => {
-  //     console.log(e.target)
-  //   })
-  // }
-
   render() {
     const { item } = this.props;
 

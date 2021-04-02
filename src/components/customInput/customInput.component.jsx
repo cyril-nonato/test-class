@@ -13,9 +13,10 @@ class CustomInputComponent extends Component {
 
     const { todo } = this.state;
 
-    // Checks if todo has value
     if(todo) {
-      createTodo(todo)
+      createTodo(todo);
+
+      // Resets input value
       this.setState({
         todo: ""
       })
