@@ -2,12 +2,7 @@ import { filterTodos } from "./todos.helper";
 import { actionTypes } from "./todos.types";
 
 const initialState = {
-  list: [
-    {
-      id: 1,
-      name: "Todo"
-    }
-  ]
+  list: []
 };
 
 const todosReducer = (state = initialState, action) => {

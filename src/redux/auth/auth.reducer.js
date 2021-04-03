@@ -1,7 +1,7 @@
 import { checkAuthCredsToCreds, checkRegex } from "./auth.helper";
 import { actionTypes } from "./auth.types";
 
-const initialState = {
+export const initialState = {
   creds: {
     username: "",
     password: ""
@@ -36,11 +36,13 @@ export const authReducer = (state = initialState, action) => {
       };
 
       const found = checkRegex(password);
+
+      // Returns error if password contains invalid characters
       if(found) {
         return {
           ...state,
-          message: `Passwords with characters "&^$#" are not valid `,
-          error: true
+          error: true,
+          message: `Passwords with characters "&^$#" are not valid`,
         }
       }
 

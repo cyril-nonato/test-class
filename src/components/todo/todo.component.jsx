@@ -19,7 +19,7 @@ class TodoComponent extends Component {
     const { showButton } = this.state;
 
     return (
-      <S.Container
+      <S.Container title="TodoContainer"
         onMouseEnter={(e) => {
           this.setState({showButton: true})
         }}
@@ -28,14 +28,14 @@ class TodoComponent extends Component {
           this.setState({showButton: false})
         }}
       >
-        <span>
+        <span title="Span">
           {
             item.name
           }
         </span>
         {
           showButton ?
-          <S.ButtonContainer>
+          <S.ButtonContainer title="ButtonContainer">
             <S.Button
               onClick={this.handleDelete}
             >

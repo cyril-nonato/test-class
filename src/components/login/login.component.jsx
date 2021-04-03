@@ -39,7 +39,7 @@ class LoginComponent extends Component {
   }
 
   render() {
-    const { auth, authenticated, error, message } = this.props;
+    const { authenticated, error, message } = this.props;
 
     // Redirect user if all the creds information is correct
     if(authenticated) {
@@ -48,27 +48,22 @@ class LoginComponent extends Component {
 
     return (
       <S.Container>
-      <div
-        style={{
-          height: "30vh",
-          width: "40vh",
-        }}
-      >
-        <S.Form onSubmit={this.handleSubmit}>
-          <S.Input value={this.state.username} onChange={e => this.handleUsername(e)} placeholder="Username" />
-          <S.Input value={this.state.password} onChange={e => this.handlePassword(e)} placeholder="Password" />
-          <S.Button onSubmit={this.handleSubmit} type="submit">Submit</S.Button>
+      <S.InnerContainer>
+        <S.Form onSubmit={this.handleSubmit} title="Form">
+          <S.Input value={this.state.username} onChange={e => this.handleUsername(e)} placeholder="Username" title="Username" />
+          <S.Input value={this.state.password} onChange={e => this.handlePassword(e)} placeholder="Password" title="Password" />
+          <S.Button onSubmit={this.handleSubmit} type="submit" title="Login">Login</S.Button>
         </S.Form>
         {
           error ?
-          <S.Error>
+          <S.Error title="Error">
             {
               message
             }
           </S.Error>
           : null
         }
-      </div>
+      </S.InnerContainer>
       </S.Container>
     )
   }

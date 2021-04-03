@@ -34,9 +34,9 @@ class CustomInputComponent extends Component {
     const { todo } = this.state;
 
     return (
-      <S.FormContainer onSubmit={this.handleSubmit}>
-        <S.Input value={todo} onChange={this.handleChange} />
-          <S.Button type="submit">Add</S.Button>
+      <S.FormContainer onSubmit={this.handleSubmit} title="Form">
+        <S.Input value={todo} onChange={this.handleChange} title="InputField" />
+        <S.Button type="submit" title="AddButton" >Add</S.Button>
       </S.FormContainer>
     )
   }

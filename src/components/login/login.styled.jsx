@@ -8,6 +8,11 @@ export const Container = styled.div`
   flex-direction: column;
 `
 
+export const InnerContainer = styled.div`
+  height: 30vh;
+  width: 40vh;
+`
+
 export const Form = styled.form`
   display: flex;
   flex-direction: column;

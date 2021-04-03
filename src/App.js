@@ -4,10 +4,6 @@ import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import HomePageContainer from './pages/home-page/home-page.container';
 import LoginContainer from './components/login/login.container';
 class App extends Component {
-  constructor(props) {
-
-    super(props);
-  }
 
   render() {
     return (

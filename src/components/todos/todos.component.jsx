@@ -6,7 +6,7 @@ const TodosComponent = (props) => {
   const { todos } = props;
 
   return ( 
-    <S.Container>
+    <S.Container title="Container">
       {
         todos.length ?
         todos.map(item => {

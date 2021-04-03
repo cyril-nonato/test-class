@@ -5,8 +5,6 @@ import HomePage from './home-page.component';
 const mapStateToProps = (state) => {
   return {
     auth: state.auth.creds,
-    error: state.auth.error,
-    message: state.auth.message,
     authenticated: state.auth.authenticated
   }
 };

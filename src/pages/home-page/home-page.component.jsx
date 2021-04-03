@@ -12,7 +12,7 @@ const HomePage = (props) => {
   if(!authenticated) {
     return <Redirect to="/login" />
   };
-  console.log('a')
+
   return ( 
     <S.Container>
 

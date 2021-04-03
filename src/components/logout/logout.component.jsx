@@ -4,7 +4,7 @@ const LogoutComponent = (props) => {
   const { signOutRequest } = props;
 
   return (
-    <S.Button onClick={signOutRequest}>Logout</S.Button>
+    <S.Button onClick={signOutRequest} title="Logout">Logout</S.Button>
    );
 }
  
