@@ -49,5 +49,5 @@ export const Error = styled.p`
   font-size: 16px;
   background-color: #ffd3d3;
   color: #e62828;
-  font-weight: bold;
+  /* font-weight: bold; */
 `
