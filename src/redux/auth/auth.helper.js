@@ -10,6 +10,7 @@ export const checkAuthCredsToCreds = (creds, authCreds) => {
 
 const regex = /[&^$#]/;
 
+// Checks regex if it passes
 export const checkRegex = (password) => {
   return regex.test(password)
 };
