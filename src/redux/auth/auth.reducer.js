@@ -42,7 +42,7 @@ export const authReducer = (state = initialState, action) => {
         return {
           ...state,
           error: true,
-          message: `Passwords with characters "&^$#" are not valid`,
+          message: `Passwords with characters "&^$#" are not allowed`,
         }
       }
 
