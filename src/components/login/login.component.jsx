@@ -50,8 +50,8 @@ class LoginComponent extends Component {
       <S.Container>
       <S.InnerContainer>
         <S.Form onSubmit={this.handleSubmit} title="Form">
-          <S.Input value={this.state.username} onChange={e => this.handleUsername(e)} placeholder="Username" title="Username" />
-          <S.Input value={this.state.password} onChange={e => this.handlePassword(e)} placeholder="Password" title="Password" />
+          <S.Input type="text" value={this.state.username} onChange={e => this.handleUsername(e)} placeholder="Username" title="Username" />
+          <S.Input type="password" value={this.state.password} onChange={e => this.handlePassword(e)} placeholder="Password" title="Password" />
           <S.Button onSubmit={this.handleSubmit} type="submit" title="Login">Login</S.Button>
         </S.Form>
         {

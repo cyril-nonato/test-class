@@ -51,7 +51,7 @@ test("authReducerTest", () => {
   expect(authReducer(initialState, signInRequest(credsParameterInvalidCharactersPassword))).toEqual({
     ...initialState,
     error: true,
-    message: `Passwords with characters "&^$#" are not valid`,
+    message: `Passwords with characters "&^$#" are not allowed`,
   });
 
   expect(authReducer(initialState, signInRequest(credsParameterWithWrongPassword))).toEqual({

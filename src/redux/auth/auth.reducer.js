@@ -1,4 +1,4 @@
-import { checkAuthCredsToCreds, checkRegex } from "./auth.helper";
+import { checkAuthCredsToCreds, checkRegexPassword, checkRegexUsername } from "./auth.helper";
 import { actionTypes } from "./auth.types";
 
 export const initialState = {
@@ -35,10 +35,20 @@ export const authReducer = (state = initialState, action) => {
         password
       };
 
-      const found = checkRegex(password);
+      const checkPassword = checkRegexPassword(password);
+
+      const checkUsername = checkRegexUsername(username);
+
+      if(!checkUsername) {
+        return {
+          ...state,
+          error: true,
+          message: `Username is invalid, please use alpha numeric characters`,
+        }
+      }
 
       // Returns error if password contains invalid characters
-      if(found) {
+      if(checkPassword) {
         return {
           ...state,
           error: true,

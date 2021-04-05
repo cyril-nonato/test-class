@@ -1,4 +1,4 @@
-import { checkAuthCredsToCreds, checkRegex } from "./auth.helper";
+import { checkAuthCredsToCreds, checkRegexPassword, checkRegexUsername } from "./auth.helper";
 
 test("checkAuthCredsToCredsTest", () => {
   const authCreds = {
@@ -21,11 +21,16 @@ test("checkAuthCredsToCredsTest", () => {
   expect(checkAuthCredsToCreds(wrongCreds, authCreds)).toBeFalsy();
 });
 
-test("checkRegexTest", () => {
+test("checkRegexPasswordTest", () => {
   
-  expect(checkRegex(123456)).toBeFalsy();
+  expect(checkRegexPassword(123456)).toBeFalsy();
 
-  expect(checkRegex("123^")).toBeTruthy();
+  expect(checkRegexPassword("123^")).toBeTruthy();
   
-  expect(checkRegex("^$%&#")).toBeTruthy();
+  expect(checkRegexPassword("^$%&#")).toBeTruthy();
+})
+
+test("checkRegexUsernameTest", () => {
+  expect(checkRegexUsername("#43w54")).toBeFalsy();
+  expect(checkRegexUsername("username")).toBeTruthy();
 })
